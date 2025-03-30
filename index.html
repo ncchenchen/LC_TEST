@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'Noto Sans TC', sans-serif;
@@ -37,12 +37,13 @@
     }
     .card {
       max-width: 600px;
-      margin: 40px auto 140px;
+      margin: 60px auto 100px;
       background-color: #ffffffcc;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 32px 24px 80px;
+      padding: 32px;
       box-sizing: border-box;
+      min-height: 400px;
     }
     .question-text {
       font-weight: 600;
@@ -68,7 +69,7 @@
     .progress {
       text-align: center;
       font-size: 14px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       color: #666;
     }
     #nextBtn {
@@ -81,17 +82,17 @@
       border: none;
       border-radius: 12px;
       cursor: pointer;
-      margin-top: 24px;
+      margin-top: 30px;
     }
     #nextBtn:hover {
       background-color: #8fc2a7;
     }
     #result {
       max-width: 600px;
-      margin: 40px auto 100px;
+      margin: 60px auto 100px;
       background-color: #ffffffee;
       border-radius: 16px;
-      padding: 32px 24px;
+      padding: 32px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     #result h2 {
@@ -108,10 +109,11 @@
       padding: 24px;
       background-color: rgba(255, 255, 255, 0.8);
     }
+
     @media (max-width: 600px) {
       .card, #result {
-        margin: 24px 16px 140px;
-        padding: 24px 20px 80px;
+        margin: 32px 16px 120px;
+        padding: 28px 20px 60px;
       }
       .question-text {
         font-size: 16px;
@@ -227,7 +229,7 @@
         const value = valueMap[i];
         const label = document.createElement("label");
         label.className = "option";
-        label.innerHTML = `<input type="radio" name="q" value="${value}"> ${opt}`;
+        label.innerHTML = `<input type=\"radio\" name=\"q\" value=\"${value}\"> ${opt}`;
         optionsDiv.appendChild(label);
       });
     }
