@@ -7,19 +7,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'Noto Sans TC', sans-serif;
       background-color: #F8F5F0;
       color: #333;
-      background-image: url('background.jpeg');
+      background-image: url('https://cdn.jsdelivr.net/gh/ncchenchen/LCQUIZ_2200/background.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       background-repeat: no-repeat;
       min-height: 100vh;
       overflow-x: hidden;
+    }
+    body::after {
+      content: "";
+      display: none;
     }
     header {
       text-align: center;
@@ -37,14 +41,12 @@
     }
     .card {
       max-width: 600px;
-      margin: 40px auto 60px;
+      margin: 40px auto;
       background-color: #ffffffcc;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       padding: 24px;
       box-sizing: border-box;
-      min-height: auto;
-      height: auto !important;
     }
     .question-text {
       font-weight: 600;
@@ -112,10 +114,8 @@
     }
     @media (max-width: 600px) {
       .card, #result {
-        margin: 24px 16px 80px;
+        margin: 24px 16px 40px;
         padding: 20px;
-        min-height: auto;
-        height: auto !important;
       }
       .question-text {
         font-size: 16px;
@@ -266,7 +266,7 @@
         <div class="card">
           <h2>你的專屬香氣組合</h2>
           <ul>${descriptions}</ul>
-          <p style="margin-top:16px">願這些氣味成為你生活的陪伴，讓每一次呼吸都更靠近真實的自己。</p>
+          <p style="margin-top:16px">願這些香氣陪伴你生活，讓每一次呼吸都更靠近真實的自己。</p>
         </div>
       `;
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -274,3 +274,5 @@
 
     showQuestion(current);
   </script>
+</body>
+</html>
